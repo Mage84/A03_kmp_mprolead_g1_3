@@ -38,7 +38,7 @@ jobs:
       # (sdk.dir n'est pas nécessaire : le runner expose déjà ANDROID_SDK_ROOT)
       - name: Create local.properties
         run: |
-          echo "photographerApiKey=${{ secrets.PHOTOGRAPHER_API_KEY }}" > local.properties
+          echo "photographerApiKey=${{ secrets.WEATHER_API_KEY }}" > local.properties
           echo "compose.desktop.packaging.checkJdkVendor=false" >> local.properties
 
       # Rend le wrapper exécutable (le bit +x peut être perdu sur un repo créé sous Windows)
