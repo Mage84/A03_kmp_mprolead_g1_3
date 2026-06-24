@@ -101,12 +101,10 @@ kotlin {
             implementation("io.insert-koin:koin-compose:4.1.+")
             implementation("io.insert-koin:koin-compose-viewmodel:4.1.+")
             implementation("io.insert-koin:koin-compose-viewmodel-navigation:4.1.+")
-
-            testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
-            testImplementation("org.mockito.kotlin:mockito-kotlin:5.3.1")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
         }
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -117,6 +115,11 @@ kotlin {
         iosMain.dependencies {
             //Client de requêtes spécifique à iOS
             implementation("io.ktor:ktor-client-darwin:3.2.2")
+        }
+
+        androidUnitTest.dependencies {
+            implementation("org.mockito.kotlin:mockito-kotlin:5.3.1")
+            implementation("org.mockito:mockito-core:5.11.0")
         }
 
     }
