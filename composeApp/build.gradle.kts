@@ -32,7 +32,7 @@ buildConfig {
     // Récupération sécurisée de la clé
     val photographerApiKey = localProperties.getProperty("photographer.api.key") ?: ""
 
-    val weatherApiKey = localProperties.getProperty("weather.api.key") ?: ""
+    val weatherApiKey = localProperties.getProperty("WEATHER_API_KEY") ?: ""
     buildConfigField("String", "WEATHER_API_KEY", "\"$weatherApiKey\"")
 
     println("photographerApiKey chargée : $photographerApiKey")
