@@ -32,6 +32,9 @@ buildConfig {
     // Récupération sécurisée de la clé
     val photographerApiKey = localProperties.getProperty("photographer.api.key") ?: ""
 
+    val weatherApiKey = localProperties.getProperty("weather.api.key") ?: ""
+    buildConfigField("String", "WEATHER_API_KEY", "\"$weatherApiKey\"")
+
     println("photographerApiKey chargée : $photographerApiKey")
 
     // Crée le champ pour tous les targets (Android, iOS, Desktop)
