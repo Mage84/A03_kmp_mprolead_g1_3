@@ -1,0 +1,4 @@
+<resources>
+    <string name="my_label">Bonjour</string>
+    <string name="bt_load">Chargement</string>
+</resources>
